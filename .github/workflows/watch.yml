@@ -1,0 +1,49 @@
+# Checks every page in watch.config.json once a day (or on demand), then commits the snapshots
+# and the report if anything changed. The commit history of snapshots/ becomes the change
+# history of the pages.
+name: Watch pages
+
+on:
+  schedule:
+    # 00:23 UTC. An odd minute, to stay clear of the rush at the top of the hour.
+    - cron: "23 0 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+# Two rounds running at once would race to commit the same files.
+concurrency:
+  group: watch
+  cancel-in-progress: false
+
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run check
+        env:
+          # All three are optional. Without LLM_API_KEY summaries are plain line counts; without
+          # the two Telegram secrets no message is sent.
+          LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+      - name: Commit new snapshots and reports
+        run: |
+          git add snapshots
+          if [ -d reports ]; then git add reports; fi
+          if git diff --cached --quiet; then
+            echo "Nothing changed."
+            exit 0
+          fi
+          git config user.name "page-watch-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git commit -m "Update page snapshots"
+          git push
