@@ -1,0 +1,17 @@
+{
+  "pages": [
+    {
+      "name": "Node.js releases",
+      "url": "https://nodejs.org/en/about/previous-releases"
+    },
+    {
+      "name": "Supported PHP versions",
+      "url": "https://www.php.net/supported-versions.php"
+    },
+    {
+      "name": "Python downloads",
+      "url": "https://www.python.org/downloads/",
+      "selector": ".download-list-widget"
+    }
+  ]
+}
