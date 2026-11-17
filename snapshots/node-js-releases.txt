@@ -5,7 +5,7 @@ Release Schedule
 Full details regarding the Node.js release schedule are available on GitHub.
 Looking for the latest release of a version branch?
 Node.js | Codename | First released | Last updated | Status |
-v27 | - | Oct 29, 2026 | Nov 12, 2026 | Alpha | Details
+v27 | - | Oct 29, 2026 | Nov 16, 2026 | Alpha | Details
 v26 | Lithium | May 05, 2026 | Nov 10, 2026 | LTS | Details
 v25 | - | Oct 15, 2025 | Mar 31, 2026 | EOL | Details
 v24 | Krypton | May 06, 2025 | Nov 10, 2026 | LTS | Details
