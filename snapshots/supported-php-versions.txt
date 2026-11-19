@@ -1,4 +1,4 @@
-PHP 8.6.0RC7 available for testing
+Upcoming Critical PHP Security Release
 Supported Versions
 Each release branch of PHP is fully supported for two years from its initial stable release. During this period, bugs and security issues that have been reported are fixed and are released in regular point releases.
 After this two year period of active support, each branch is then supported for two additional years for critical security issues only. Releases during this period are made on an as-needed basis: there may be multiple point releases, or none, depending on the number of reports.
