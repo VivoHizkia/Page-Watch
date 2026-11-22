@@ -1,4 +1,4 @@
-PHP 8.6.0 Released!
+PHP Conference Kansai 2026 (JAPAN)
 Supported Versions
 Each release branch of PHP is fully supported for two years from its initial stable release. During this period, bugs and security issues that have been reported are fixed and are released in regular point releases.
 After this two year period of active support, each branch is then supported for two additional years for critical security issues only. Releases during this period are made on an as-needed basis: there may be multiple point releases, or none, depending on the number of reports.
@@ -9,7 +9,7 @@ Branch | Initial Release | Active Support Until | Security Support Until | Notes
 8.3 | 23 Nov 2023 | 2 years, 11 months ago | 31 Dec 2025 | 10 months ago | 31 Dec 2027 | in 1 year, 1 month | Migration guide for PHP 8.3
 8.4 | 21 Nov 2024 | 2 years ago | 31 Dec 2026 | in 1 month | 31 Dec 2028 | in 2 years, 1 month | Migration guide for PHP 8.4
 8.5 | 20 Nov 2025 | 1 year ago | 31 Dec 2027 | in 1 year, 1 month | 31 Dec 2029 | in 3 years, 1 month | Migration guide for PHP 8.5
-8.6 | 19 Nov 2026 | 2 days ago | 31 Dec 2028 | in 2 years, 1 month | 31 Dec 2030 | in 4 years, 1 month | Migration guide for PHP 8.6
+8.6 | 19 Nov 2026 | 3 days ago | 31 Dec 2028 | in 2 years, 1 month | 31 Dec 2030 | in 4 years, 1 month | Migration guide for PHP 8.6
 Or, visualised as a calendar:
 Key
 Active support | A release that is being actively supported. Reported bugs and security issues are fixed and regular point releases are made.
